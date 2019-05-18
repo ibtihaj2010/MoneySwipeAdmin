@@ -9,6 +9,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
+              <th></th>
               <th>CustomerID</th>
               <th>CountryCode</th>
               <th>CountryName</th>
@@ -21,6 +22,8 @@
           </thead>
           <tbody>
             <tr *ngFor="let user of users$">
+              <td class="py-1">
+                <img src="../../../assets/images/faces-clipart/pic-1.png" alt="image"> </td>
               <td>{{user.customerID}}</td>
               <td>{{user.countryCode}}</td>
               <td> {{user.countryName}}</td>
@@ -30,7 +33,10 @@
               <td>
                 <label class="badge badge-success">{{user.status}}</label>
               </td>
-              <td></td>
+              <td>
+                <button class="badge badge-info">View Details</button>
+
+              </td>
             </tr>
 
           </tbody>
