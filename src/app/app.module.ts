@@ -10,6 +10,7 @@ import { SharedModule } from './modules/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,

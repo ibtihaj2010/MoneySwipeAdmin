@@ -5,11 +5,16 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DatatableComponent } from './components/datatable/datatable.component';
+import { DialogComponent } from './components/dialog/components/dialog/dialog.component';
+import { MatTableModule, MatCheckboxModule, MatButtonModule, MatDialogModule, MatSelectModule } from '@angular/material';
 
 const sharedComponents = [
     NavbarComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    DatatableComponent,
+    DialogComponent
 ];
 
 @NgModule({
@@ -18,6 +23,12 @@ const sharedComponents = [
         RouterModule,
         ReactiveFormsModule,
         FormsModule,
+        MatTableModule,
+        MatCheckboxModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatSelectModule
+
     ],
     declarations: sharedComponents,
     exports: sharedComponents,

@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { routedComponents, UsersRoutingModule } from './user-routing.module';
 import { ReactiveFormsModule, FormsModule } from '../../../../node_modules/@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { UserService } from './service/user.service';
+import { CoreModule } from '../core';
+import { HttpClientModule } from '@angular/common/http';
+import { UserlistComponent } from './components/userlist/userlist.component';
 
 @NgModule({
     imports: [
@@ -11,9 +15,13 @@ import { SharedModule } from '../shared/shared.module';
         ReactiveFormsModule,
         FormsModule,
         SharedModule,
+        HttpClientModule,
+        CoreModule,
+
+
     ],
-    providers: [],
-    declarations: [routedComponents]
+    providers: [UserService],
+    declarations: [routedComponents, UserlistComponent]
 })
 
 export class UsersModule { }
