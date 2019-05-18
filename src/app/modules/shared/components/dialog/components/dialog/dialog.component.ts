@@ -9,9 +9,9 @@ import { FormGroup } from "@angular/forms";
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
-  //@Input() reasons: any[];
+  @Input() reasons: any[];
   form: FormGroup;
-  reasons;
+  //reasons;
   reasonID: string;
 
   constructor(private dialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
